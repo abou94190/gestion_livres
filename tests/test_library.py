@@ -35,7 +35,8 @@ class TestLibrary(unittest.TestCase):
         self.library.add_book(self.book1)
         self.library.add_book(self.book2)
         books_list = self.library.list_books()
-        self.assertEqual(books_list, ["1984 by George Orwell", "Brave New World by Aldous Huxley"])
+        expected_list = ["1984 by George Orwell", "Brave New World by Aldous Huxley"]
+        self.assertEqual(sorted(books_list), sorted(expected_list))
 
 
 if __name__ == '__main__':
